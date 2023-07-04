@@ -1,0 +1,21 @@
+<section class="content-header">
+  <div class="row">
+    <div class="col" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='whitesmoke'/%3E%3C/svg%3E&#34;);">
+      <ol class="breadcrumb">
+        <ng-container *ngFor="let element of breadcrumbs">
+          <li class="breadcrumb-item active" style="color: whitesmoke;">{{element.titulo}}</li>
+        </ng-container>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" *ngFor="let breadcrumb of breadcrumbs; let last = last" [class.active]="last">
+      <a *ngIf="!last" [routerLink]="breadcrumb.url">{{ breadcrumb.titulo }}</a>
+      <span *ngIf="last">{{ breadcrumb.titulo }}</span>
+    </li>
+  </ol>
+</nav> -->
+

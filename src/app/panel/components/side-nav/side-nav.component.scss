@@ -1,0 +1,139 @@
+
+.sidenav{
+  transition: all .5s ease;
+  z-index: 1;
+  top: 0;
+  height: calc(100vh - 163px);
+  background-color: #F2F4F4;
+  // box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+  
+}
+
+.sidenav-nav{
+  list-style: none;
+  padding: 0.938rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 65px);
+  background-color: #F2F4F4;
+
+
+  .sidenav-nav-item{
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 0.625rem;
+
+    .sidenav-nav-link{
+      display: flex;
+      align-items: center;
+      height: 2.5rem;
+      color: #2f363a;
+      text-decoration: none;
+      border-radius: 0.625rem;
+      transition: all .3s ease;
+
+      .sidenav-link-icon{
+        font-size: 17px;
+        width: 2rem;
+        min-width: 2rem;
+        margin: 0 0.5rem;
+        text-align: center;
+      }
+
+      .sidenav-link-text{
+        font-size: 1rem;
+        margin-left: 0.4rem;
+      }
+
+      .sidenav-link-icon-expand{
+        font-size: 22px;
+        width: 100%;
+        margin-right: 15px;
+        text-align: end;
+      }
+    }
+  }
+
+  .sidenav-nav-item:hover{
+    .sidenav-nav-link{
+      background-color: #2f363a;
+      color: #fff;
+    }
+  }
+}
+
+.active{
+  background-color: #2f363a;
+
+  .sidenav-link-icon,
+  .sidenav-link-text,
+  .sub-menu-icon,
+  .sub-menu-text,
+  .sidenav-link-icon-expand
+  {
+    color: #fff;
+  }
+}
+
+.sub-menu-link{
+  display: flex;
+  align-items: center;
+  height: 2.1rem;
+  color: #2f363a;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  transition: all .3s ease;
+
+  .sub-menu-icon{
+    font-size: 18px;
+    width: 2rem;
+    min-width: 2rem;
+    text-align: center;
+  }
+
+  .sub-menu-text{
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.sidenav-nav-item {
+  position: relative;
+}
+
+.sidenav-nav-item.expanded > ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear;
+}
+
+.sidenav-nav-item .expanded .sub-menu-item {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidenav-nav-item .sub-menu-item {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s ease-in-out, visibility 1s linear 0.3s; 
+}
+
+.sidenav-nav-item .expanded .sub-menu-item {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: 1s ease-in-out; 
+}
+
+.sub-menu-item:hover{
+  .sub-menu-link{
+    background-color: #2f363a;
+      color: #fff;
+  }
+}

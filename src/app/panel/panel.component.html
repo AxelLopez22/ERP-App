@@ -1,0 +1,17 @@
+<app-navbar (menuClicked)="sideNav.toggle()" style="position: fixed; width: 100%;"></app-navbar>
+
+
+<mat-sidenav-container style="margin-top: 65px;">
+  <mat-sidenav [mode]="!breakpoint ? 'side' : 'over'" #sideNav (window:resize)="onResize($event)" class="mat-elevation-z6" 
+    style="width: 280px; height: 100%; background-color: #F2F4F4;" opened>
+    <app-side-nav></app-side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="main-content">
+      <!-- <app-breadcrums></app-breadcrums> -->
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer class="footer"></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

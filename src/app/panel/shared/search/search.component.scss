@@ -1,0 +1,19 @@
+.input-search{
+    width: 300px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  mat-form-field{
+    padding: 0;
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 468px) {
+    .input-search{
+      width: 200px;
+      margin-right: 4px;
+    }
+  }
+  

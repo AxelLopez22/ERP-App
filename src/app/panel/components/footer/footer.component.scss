@@ -1,0 +1,39 @@
+
+.section-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 6vh;
+    background-color: #566269;
+    padding: 1.5rem;
+    color: white;
+
+    .section-center{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        letter-spacing: 2px;
+
+        a{
+            color: white;
+        }
+    }
+
+    .section-right {
+        border-left: 2px solid white;
+
+        i{
+            padding: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+    }
+}
+
+i :hover{
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgba(185, 141, 141, 0.1);
+}

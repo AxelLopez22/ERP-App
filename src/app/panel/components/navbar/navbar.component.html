@@ -1,0 +1,58 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="menuClicked.emit()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <!-- <h2 style="margin-top: 15px;">{{currentRoute}}</h2> -->
+    <div class="breadcrumbs-container">
+      <app-breadcrums class="breadcrumb"></app-breadcrums>
+    </div>
+    
+  
+    <div class="user-info">
+      <button mat-icon-button style="margin-right: 20px;" matTooltip="Notificaciones"
+        [matMenuTriggerFor]="notificaciones">
+        <mat-icon matBadge="4" matBadgeColor="primary" matBadgeSize="small">notifications</mat-icon>
+      </button>
+      
+      <span>Axel, {{usernameAuthenticated}}</span>
+      <button mat-icon-button [matMenuTriggerFor]="userMenu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </div>
+  
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item (click)="profile()">
+        <mat-icon>account_box</mat-icon>
+        <span>Mi Perfil</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Cerrar Sesión</span>
+      </button>
+    </mat-menu>
+
+    <mat-menu #notificaciones="matMenu" class="my-menu">
+      <div class="d-flex p-x-32 p-y-16" style="justify-content: center;">
+        <h6 class="f-s-16 f-w-600 m-0">Notificaciones</h6>
+      </div>
+      <mat-divider></mat-divider>
+
+      <div *ngFor="let element of [1,1,1,1]">
+        <app-notifications></app-notifications>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="p-y-12 p-x-32 mt-3">
+        <button mat-stroked-button="" color="primary" class="w-100 mdc-button mdc-button--outlined mat-mdc-outlined-button mat-primary mat-mdc-button-base" mat-button-is-fab="false">
+          <span class="mdc-button__label"> Ver todas </span>      
+        </button>
+      </div>     
+    </mat-menu>
+
+
+  </mat-toolbar>
+
+  <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-clip-rotate-multiple"
+               [fullScreen]="true"><p style="color: white"> Cargando... </p></ngx-spinner>

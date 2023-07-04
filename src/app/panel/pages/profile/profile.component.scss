@@ -1,0 +1,16 @@
+.profile{
+    height: calc(100vh - 150px);
+    padding: 1rem;
+
+    .section-name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 20vh;
+    }
+}
+
+mat-card{
+    margin-bottom: 10px;
+}

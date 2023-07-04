@@ -1,0 +1,36 @@
+<!-- <mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let option of sideNavContent" routerLink="{{option.link}}"
+      routerLinkActive="active" style="cursor: pointer;">
+    <mat-icon>{{option.icon}}</mat-icon>
+    <span>{{option.tittle | titlecase}}</span>
+  </mat-list-item>
+  
+</mat-list> -->
+<div class="sidenav">
+  <ul class=" sidenav-nav">
+    <ng-container *ngFor="let data of sideNavContent">
+      <li class="sidenav-nav-item" [class.expanded]="data.expanded" (click)="toggleSubmenu($event, data)">
+        <a href="" class="sidenav-nav-link" [routerLink]="data.routeLink ? [data.routeLink] : null" 
+          routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}"
+          [ngClass]="data.expanded ? 'active' : ''">
+          <i class="sidenav-link-icon" [class]="data.icon"></i>
+          <span class="sidenav-link-text">{{data.label}}</span>
+          <i *ngIf="data.items" class="sidenav-link-icon-expand fa-solid fa-angle-right" 
+          [ngClass]="!data.expanded ? 'fa-solid fa-angle-right': 'fa-solid fa-angle-down'"
+          ></i>
+        </a>
+        <ul style="background-color: #EAECEE; border-radius: 10px;" *ngIf="data.items"  [class.sub-menu]="true" [class.expanded]="data.expanded">
+          <li class="sub-menu-item" *ngFor="let subItem of data.items">
+            <a href="" class="sub-menu-link" [routerLink]="[subItem.routeLink]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="$event.stopPropagation()">
+              <i class="sub-menu-icon" [class]="subItem.icon"></i>
+              <span class="sub-menu-text">{{subItem.label}}</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ng-container>
+  </ul>
+</div>
+
+

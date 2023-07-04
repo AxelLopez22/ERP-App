@@ -1,0 +1,20 @@
+
+
+<mat-card class="actions">
+    <app-search (search)="handleSearch($event)"></app-search>
+
+    <div class="d-flex gap-2">
+        <button class="animate__animated animate__fadeInRight animate__delay-.2000s" mat-raised-button color="primary" matTooltip="Agregar Nuevo">
+            Agregar
+        </button>
+        <button class="animate__animated animate__fadeInRight animate__delay-.2000s" matTooltip="Exportar a Excel" style="background-color: #27ae60; color: #fff" mat-raised-button>
+            Excel
+        </button>
+    </div>
+    
+</mat-card>
+
+<div class="table-section">
+    
+    <app-mat-table [displayedColumns]="displayedColumns" [dataSource]="dataSource"></app-mat-table>
+</div>

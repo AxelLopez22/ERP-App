@@ -1,0 +1,35 @@
+.login-content{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle, #eaecee, #cfd3d7, #b4bac1, #99a2ab, #808b96);
+}
+
+mat-card {
+  width: 40%;
+  text-align: center;
+  box-shadow:5px 5px 10px #808B96;
+}
+  
+mat-form-field {
+  display: block;
+}
+
+mat-divider{
+  margin: 20px 0 20px 0;
+}
+
+@media screen and (max-width: 850px) {
+    mat-card {
+        width: 60%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    mat-card {
+        width: 80%;
+        text-align: center;
+    }
+}

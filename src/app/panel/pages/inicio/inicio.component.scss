@@ -1,0 +1,22 @@
+.titulo{
+    display: flex;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    button{
+        margin: 0 5px 0 5px;
+    }
+}
+
+.table-section{
+    margin-top: 1rem;
+}

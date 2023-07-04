@@ -1,0 +1,20 @@
+.table{
+    width: 100%;
+    overflow-x: auto;
+  
+    table{
+      width: 100%;
+  
+      .mat-cell,
+      .mat-header-cell{
+        font-size: 1.1rem;
+        &:is(.mat-header-cell){
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  mat-paginator{
+    background-color: #fafafa;
+  }
